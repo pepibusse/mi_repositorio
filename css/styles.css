@@ -200,6 +200,11 @@ h3 {
     opacity: 0.8;
     color: white;
     margin: 10px;
+
+    padding-top: 5px;
+    border: 2px solid;
+    border-color: white;
+    
 }
 
 
@@ -389,7 +394,6 @@ ol {
     background-color: rgb(10, 9, 9);
     text-align: left;
     color: white;
-    min-height: 500px;
 
     padding-top: 100px;
 }
@@ -574,5 +578,14 @@ footer {
     .footerlogos{
         width: 90%;
         height: 90%; 
+    }
+
+    .sobre-nos{
+        min-height: 500px;
+        line-height: 45px;
+    }
+
+    .main-cont{
+        font-size: 12px;
     }
 }   

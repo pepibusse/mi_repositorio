@@ -1,0 +1,516 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Sofia+Sans:wght@100;500&display=swap");
+/*Clases SCSS*/
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+hr {
+  margin: 5px;
+}
+
+/*Grid de Index*/
+#index-grilla {
+  display: grid;
+  grid-template-areas: "header" "nav-grid" "main-confusion" "main-cordura" "footer";
+}
+#index-grilla #header {
+  grid-area: header;
+}
+#index-grilla #nav-grid {
+  grid-area: nav-grid;
+}
+#index-grilla #main-confusion {
+  grid-area: main-confusion;
+}
+#index-grilla #main--cordura {
+  grid-area: main-cordura;
+}
+#index-grilla #footer {
+  grid-area: footer;
+}
+
+/* Características del header y nav*/
+header, nav {
+  font-family: "Sofia Sans", Verdana, sans-serif;
+  font-size: larger;
+  background-color: rgb(10, 9, 9);
+  color: rgb(59, 58, 58);
+  line-height: 50px;
+  padding-top: 15px;
+  /*Sintaxis SCSS*/
+}
+header:hover, nav:hover {
+  background-image: url(../multimedia/vortex.gif);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 25px;
+}
+
+.headerbl {
+  background-color: white;
+}
+
+h1 {
+  text-align: left;
+  padding-left: 20px;
+}
+
+h2 {
+  font-family: "Sofia Sans", Verdana, sans-serif;
+  font-size: 33px;
+  font-weight: bold;
+  text-align: center;
+  padding-left: 20px;
+}
+
+nav {
+  text-align: right;
+}
+
+nav a {
+  color: white;
+  font-size: 20px;
+  font-weight: normal;
+  text-decoration: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 7px;
+  -webkit-text-stroke: 0.6px black;
+}
+
+li {
+  display: inline;
+}
+
+/* fin de características del header */
+/* Características de la página principal/index */
+.div-index {
+  min-height: 300px;
+  max-height: 400px;
+}
+
+main .confusion-index {
+  font-family: "Rubik Mono One", Verdana, sans-serif;
+  text-align: center;
+  background-image: url(../multimedia/confusion/fondo.jpg), url(../multimedia/confusion/fondotele.jpg);
+  background-repeat: no-repeat;
+  background-blend-mode: exclusion;
+  background-attachment: fixed;
+  background-size: cover;
+  line-height: 75px;
+  color: white;
+  -webkit-text-stroke: black;
+  -webkit-text-stroke-width: 1px;
+  padding-top: 275px;
+}
+
+main .cordura-index {
+  font-family: "Rubik Mono One", Verdana, sans-serif;
+  text-align: center;
+  background-image: url(../multimedia/cordura/fondo3.jpg), url(../multimedia/cordura/fondo2.jpg);
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  line-height: 75px;
+  -webkit-text-stroke: black;
+  -webkit-text-stroke-width: 1px;
+  padding-top: 275px;
+}
+
+/* Fin características del index*/
+/* Características de links del index*/
+a {
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: transparent;
+  /*Sintaxis SCSS*/
+}
+a:hover {
+  background: linear-gradient(270deg, red, orange, yellow, green, rgb(50, 144, 175), blue, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Fin: Características de links del index*/
+/* Confusion - Características del main */
+.mainconfusion {
+  background-image: url(../multimedia/confusion/grain.gif);
+  font-family: "Sofia Sans", Verdana, sans-serif;
+  text-align: center;
+  background-color: transparent;
+  background-size: cover;
+}
+
+/* Fin Confusion - Características del main */
+/* Primera section de Confusión */
+.sect {
+  color: white;
+}
+
+.cancion {
+  padding-top: 20px;
+  background-color: transparent;
+  height: 100px;
+  opacity: 0.8;
+  margin: 10px;
+  /*Reutilizado en cordura.html*/
+}
+
+h3 {
+  font-size: 40px;
+  background-image: url(../multimedia/confusion/confusionfondo.jpg), url(../multimedia/vortex.gif);
+  background-blend-mode: color-burn;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.8;
+  color: white;
+  margin: 10px;
+  padding-top: 5px;
+  border: 2px solid;
+  border-color: white;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  margin: 10px;
+}
+
+.ccru {
+  background: transparent;
+}
+
+.llave {
+  background: transparent;
+}
+
+.ulheight {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: left;
+  width: auto;
+}
+
+.ulconf {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column nowrap;
+  line-height: 20px;
+  padding: 0px;
+  width: auto;
+}
+
+/*SCSS, hovers y degradé*/
+.hiper:active:after {
+  background: linear-gradient(270deg, blue, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: " es una paranoia cultural que mediante cantidades intensivas ficticias se vuelve real";
+}
+
+.disoc:active:after {
+  background: linear-gradient(270deg, green, rgb(50, 144, 175));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: " es la desconexión entre la mente de una persona y la realidad del momento presente";
+}
+
+.matmem:active:after {
+  background: linear-gradient(270deg, red, orange, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: " son sustancias retroalimentadas que constituyen el devenir de lo Real";
+}
+
+/* Fin primer section de Confusión*/
+/* Segunda section Confusión */
+.confusion-parrafo {
+  background-color: transparent;
+  line-height: 20px;
+  padding: 10px 10px 5px 10px;
+  text-align: justify;
+}
+
+.confusionpp a {
+  color: rgb(128, 128, 128);
+  font-size: large;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+ol {
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+.llave2 {
+  padding-top: 75px;
+}
+
+.li2 {
+  text-align: left;
+  display: block;
+  padding: 20px;
+  font-size: large;
+  color: white;
+  font-size: 16px;
+  line-height: 110px;
+}
+
+/*Reutilizando $colores y otros hovers*/
+.li21:active:before {
+  background: linear-gradient(270deg, blue, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: "Puesto que ";
+}
+
+.li21:active:after {
+  background: linear-gradient(270deg, blue, purple);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: ",";
+}
+
+.li22:active:before {
+  background: linear-gradient(270deg, green, rgb(50, 144, 175));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: "y ";
+}
+
+.li22:active::after {
+  background: linear-gradient(270deg, green, rgb(50, 144, 175));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: " debido a la situación particular: ";
+}
+
+.li23:active:before {
+  background: linear-gradient(270deg, red, orange, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: "nos encontramos con que, ";
+}
+
+.li23:active:after {
+  background: linear-gradient(270deg, red, orange, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  content: " -que es lo mismo que decir que estaba viva.";
+}
+
+/*Fin Segunda section de Confusión*/
+/* Cordura (parcial) */
+.maincordura {
+  background-image: url(../multimedia/cordura/fondo.gif);
+  font-family: "Sofia Sans", Verdana, sans-serif;
+  text-align: center;
+  background-size: cover;
+  width: auto;
+  height: auto;
+}
+
+.caja {
+  height: 300px;
+  width: 200px;
+  background-color: rgb(10, 9, 9);
+  margin: 25px;
+  border-radius: 10px;
+  opacity: 0.9;
+  line-height: 20px;
+  color: white;
+  font-size: xx-large;
+  text-align: center;
+  padding-top: 125px;
+  text-overflow: hidden;
+}
+
+/*Fin parcial de Cordura*/
+/* Contacto.html*/
+.main-cont {
+  font-family: "Sofia Sans", Verdana, sans-serif;
+  font-size: large;
+  background-color: rgb(10, 9, 9);
+  text-align: left;
+  color: white;
+  padding-top: 100px;
+}
+
+form {
+  margin: 20px;
+  padding: 20px;
+  line-height: 25px;
+  text-align: left;
+  border: 2px solid rgb(12, 77, 12);
+  background-color: rgb(10, 9, 9);
+}
+
+/*Características del Footer*/
+footer {
+  font-family: "Sofia Sans", Verdana, sans-serif;
+  font-size: bold;
+  background-color: gray;
+  color: rgb(59, 58, 58);
+  line-height: 40px;
+  padding: 10px;
+  text-align: center;
+}
+
+.footerlogos {
+  max-width: 25px;
+  min-width: 10px;
+  min-height: 10px;
+  max-height: 25px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+/*Fin del Footer*/
+/*Características de Sobre Nosotros*/
+.sobre-nos {
+  background-image: url(../multimedia/sobre-nosotros/muchosyo.gif), url(../multimedia/confusion/fondotele.jpg);
+  background-repeat: no-repeat;
+  background-blend-mode: exclusion;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Sofia Sans", Verdana, sans-serif;
+  text-align: center;
+  background-size: cover;
+  width: auto;
+  height: auto;
+  line-height: 250px;
+  font-size: 18px;
+  color: white;
+}
+
+.sobre-huecos:hover:before {
+  content: "Somos los hombres huecos, y es así como se acaba el mundo. ";
+}
+
+.sobre-huecos:hover:after {
+  content: " ''No con un gemido, sino con un quejido.''";
+}
+
+/*Fin de características de Sobre Nosotros*/
+/* Responsive */
+@media screen and (max-width: 768px) {
+  hr {
+    padding: 5px 0px;
+  }
+  header {
+    font-size: 15px;
+    text-align: center;
+    line-height: 45px;
+    padding: 5px;
+  }
+  nav {
+    padding-top: 0px;
+  }
+  nav > ul {
+    padding-top: 0px;
+    padding-left: 0px;
+  }
+  nav a {
+    font-size: 12px;
+    text-align: center;
+    line-height: 25px;
+    padding: 3px;
+  }
+  .div-index {
+    min-height: 100px;
+    max-height: 150px;
+  }
+  a {
+    font-size: 15px;
+  }
+  main .confusion-index, main .cordura-index {
+    padding-bottom: 125px;
+    padding-top: 125px;
+  }
+  footer {
+    font-size: 12px;
+  }
+  .cancion {
+    display: none;
+  }
+  div > .col {
+    height: 250px;
+    width: auto;
+  }
+  .ulheight {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .ccru {
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .llave {
+    width: 100%;
+    height: 100%;
+    padding-top: 15px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .llave2 {
+    width: 100%;
+    height: 100%;
+    padding-top: 35px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .ulconf {
+    font-size: 12px;
+  }
+  h3 {
+    display: block;
+    font-size: 15px;
+    height: 30px;
+    padding-top: 5px;
+    border: 2px solid;
+    border-color: white;
+  }
+  .confusion-parrafo {
+    font-size: 12px;
+  }
+  .li2 {
+    font-size: 12px;
+    line-height: 15px;
+    padding-bottom: 25px;
+    padding-right: 0px;
+  }
+  .footerlogos {
+    width: 90%;
+    height: 90%;
+  }
+  .sobre-nos {
+    min-height: 500px;
+    line-height: 45px;
+  }
+  .main-cont {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=styles.css.map */
